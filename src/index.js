@@ -51,26 +51,26 @@ class Sorter {
         {
             //this.sortet.sort(this.compare);
             ////////////
-            for (var j = 0; j < indices.length; j++) {
-                for (var i = 0; i < indices.length - 1; i++) {
-                    if (this.compare(this.sorter[indices[i]],this.sorter[indices[i+1]]) == 1) {
-                        temp = this.sorter[indices[i]];
-                        this.sorter[indices[i]] = this.sorter[indices[i + 1]];
-                        this.sorter[indices[i + 1]] = temp;
-                    };
-                };
-            };
+            // for (var j = 0; j < indices.length; j++) {
+            //     for (var i = 0; i < indices.length - 1; i++) {
+            //         if (this.compare(this.sorter[indices[i]],this.sorter[indices[i+1]]) == 1) {
+            //             temp = this.sorter[indices[i]];
+            //             this.sorter[indices[i]] = this.sorter[indices[i + 1]];
+            //             this.sorter[indices[i + 1]] = temp;
+            //         };
+            //     };
+            // };
             ///////////
-            // var temp = [];
-            // for (var i =0; i < indices.length; i++)
-            // {
-            // temp.push[this.sorter[indices[i]]];
-            // }
-            // this.temp.sort(this.compare);
-            // for (var i =0; i < indices.length; i++)
-            // {
-            // this.sorter[indices[i]] = temp[i];
-            // }
+            var temp = [];
+            for (var i =0; i < indices.length; i++)
+            {
+            temp[temp.length]=this.sorter[indices[i]];
+            }
+            temp.sort(this.compare);
+            for (var i =0; i < indices.length; i++)
+            {
+            this.sorter[indices[i]] = temp[i];
+            }
         }
     }
 
@@ -83,7 +83,7 @@ class Sorter {
         //     return compareFunction(a,b);
         // };
         /////////
-        this.compare = compa
+        this.compare = compareFunction;
         this.standart = 0;
     }
 }
