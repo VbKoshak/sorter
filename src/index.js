@@ -25,6 +25,7 @@ class Sorter {
 
   setComparator(compareFunction) {
     // your implementation
+    //
   }
 }
 
